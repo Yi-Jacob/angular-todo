@@ -8,6 +8,7 @@
     <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
   </div>
 
+
   <!-- This section shows only if user clicks Edit button -->
   <div *ngIf="editable">
     <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem
