@@ -15,7 +15,7 @@ export class AppComponent {
     { description: 'eat', done: true },
     { description: 'sleep', done: false },
     { description: 'play', done: false },
-    { description: 'laugh', done: false },
+    { description: 'repeat', done: false },
   ];
 
   get items() {
@@ -24,5 +24,12 @@ export class AppComponent {
     }
     return this.allItems.filter((item) => this.filter === 'done' ? item.done : !item.done);
   }
+
+  addItem(description: string) {
+  this.allItems.unshift({
+    description,
+    done: false
+  });
+}
 
 }
